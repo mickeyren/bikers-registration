@@ -17,7 +17,6 @@ module.exports = {
   output: {
     pathinfo: true,
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './dist/',
     filename: 'bundle.js'
   },
   watch: true,
@@ -96,7 +95,17 @@ module.exports = {
           }
         }
       },
-      { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'src') }
+      { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'src') },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'fonts/'
+            }
+        }]
+      }      
     ]
   },
   node: {

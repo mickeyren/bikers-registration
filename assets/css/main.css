@@ -3,3 +3,5 @@
 @import '~milligram/src/_Grid.sass';
 @import '~milligram/src/_Form.sass';
 @import '~milligram/src/_Utility.sass';
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome";
