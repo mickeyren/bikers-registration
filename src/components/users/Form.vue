@@ -35,7 +35,10 @@
       <input id="confirmField" type="checkbox">
       <label class="label-inline">Fri</label>  
       <input id="confirmField" type="checkbox">
-      <label class="label-inline">Sat</label>          
+      <label class="label-inline">Sat</label>       
+
+      <button class="button">Cancel</button>
+      <button class="button">Save</button>   
     </div>
   </div>  
 </template>
