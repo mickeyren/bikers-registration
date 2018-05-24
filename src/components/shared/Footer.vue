@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div class="pull-left">
+  <div class="row">
+    <div class="column">
       Dummy App 
     </div>
-    <div class="pull-right">
+    <div class="column">
       Version 1.14
     </div>
   </div>  

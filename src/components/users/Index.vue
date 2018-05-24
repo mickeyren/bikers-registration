@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div>
     <user-form></user-form>
     <list></list>
   </div>
