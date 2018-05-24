@@ -1,0 +1,17 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+button.button {
+  height: 1rem;
+  padding: 1rem .25rem;
+  line-height: 0;
+}
