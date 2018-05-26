@@ -41,14 +41,22 @@
   max-height: 500px;
 }
 
-
 .input__hint { 
   color:#999; 
   opacity:0; 
   
   transition: opacity .15s ease-in-out;
-  -o-transition: opacity .15s ease-in-out;
-  -moz-transition: opacity .15s ease-in-out;
-  -webkit-transition: opacity .15s ease-in-out;
 }
-input:focus+.input__hint { opacity:1; }
+
+input:focus+.input__hint { 
+  opacity: 1; 
+}
+
+tr .actions {
+  opacity: 0;
+  transition: opacity .15s ease-in-out;
+}
+
+tr:hover .actions { 
+  opacity: 1;
+}

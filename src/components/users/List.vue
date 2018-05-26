@@ -20,7 +20,7 @@
           <td>{{biker.rideInGroup}}</td>
           <td>{{biker.daysOfTheWeek}}</td>
           <td>{{biker.registration}}</td>
-          <td></td>
+          <td><span class="actions"><i class="fa fa-trash"></i></span></td>
         </tr>
       </tbody>
     </table>
