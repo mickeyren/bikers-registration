@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="container row">
     <div class="column">
       <div class="accordion">
         <div class="accordion__title" @click="expand">Help</div>

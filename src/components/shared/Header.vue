@@ -1,11 +1,20 @@
 <template>
-  <div class="row">
-    <div class="column">
-      <h1>Dummy App</h1>
-    </div>
-    <div class="column pull-right">
-      <i class="fa fa-user fa-2x"></i>
-      John | Log out
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <i class="fa fa-bars"></i>
+          <p class="header__title">Bikers Club</p>
+        </div>
+        <div class="column pull-right">
+          <div class="header__nav">
+            <ul>
+              <li><i class="fa fa-user"></i>Arsen</li>
+              <li>Log out</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

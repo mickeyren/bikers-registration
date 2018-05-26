@@ -1,12 +1,18 @@
 <template>
-  <div class="row">
-    <div class="column">
-      Dummy App 
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          Bikers Club
+        </div>
+        <div class="column">
+          <div class="pull-right">
+            Version 1.14
+          </div>
+        </div>
+      </div> 
     </div>
-    <div class="column">
-      Version 1.14
-    </div>
-  </div>  
+  </div>
 </template>
 
 <script>

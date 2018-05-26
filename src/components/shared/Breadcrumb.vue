@@ -1,5 +1,5 @@
 <template>
-  <div class="row breadcrumb">
+  <div class="container row breadcrumb">
     <div class="column">
       <ul>
         <li><i class="fa fa-home"></i></li>

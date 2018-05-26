@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <user-form></user-form>
     <list></list>
   </div>

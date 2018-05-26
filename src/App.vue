@@ -1,8 +1,8 @@
 <template>
-  <div id="app" class="container">
+  <div id="app">
     <top></top>
     <notifications classes="global-notification" width="500" />
-    <breadcrumbs></breadcrumbs>
+    <breadcrumb></breadcrumb>
     <categories></categories>
     <help></help>
     <router-view></router-view>
@@ -13,7 +13,7 @@
 <script>
 import Header from './components/shared/Header.vue'
 import Categories from './components/shared/Categories.vue'
-import Breadcrumbs from './components/shared/Breadcrumbs.vue'
+import Breadcrumb from './components/shared/Breadcrumb.vue'
 import Help from './components/shared/Help.vue'
 import Footer from './components/shared/Footer.vue'
 
@@ -21,7 +21,7 @@ export default {
   name: 'app',
   components: {
     top: Header,
-    breadcrumbs: Breadcrumbs,
+    breadcrumb: Breadcrumb,
     categories: Categories,
     help: Help,
     bottom: Footer,  
