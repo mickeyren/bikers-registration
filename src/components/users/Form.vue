@@ -6,13 +6,13 @@
         <form>
           <fieldset>
             <label for="nameField">Full name</label>
-            <input id="nameField" type="text">
+            <input type="text" v-model="user.name">
             <div class="input__hint">Please enter both your first and last name</div>
             <label for="nameField">Email</label>
-            <input id="nameField" type="email">
+            <input type="email" v-model="user.email">
             <div class="input__hint">Please enter your email so we can get in touch with you</div>
             <label for="nameField">City</label>
-            <input id="nameField" type="text">        
+            <input type="text" v-model="user.city">        
             <div class="input__hint">Please enter the city where you live</div>
           </fieldset>
         </form>
@@ -63,7 +63,7 @@
         </label>  
         <div class="buttons pull-right">
           <button class="button">Cancel</button>
-          <button class="button">Save</button>   
+          <button class="button" @click="addUser">Save</button>   
         </div>
       </div>
     </div>  
@@ -72,7 +72,16 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      user: {}
+    }
+  },
+  methods: {
+    addUser() {
+      this.$store.dispatch('createUser', Object.assign({}, this.user))
+    }
+  }
 }
 </script>
 

@@ -16,13 +16,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="biker in bikers" :key="biker.id">
-            <td>{{biker.name}}</td>
-            <td>{{biker.email}}</td>
-            <td>{{biker.city}}</td>
-            <td>{{biker.rideInGroup}}</td>
-            <td>{{biker.daysOfTheWeek}}</td>
-            <td>{{biker.registration}}</td>
+          <tr v-for="user in users" :key="user.id">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.city}}</td>
+            <td>{{user.rideInGroup}}</td>
+            <td>{{user.daysOfTheWeek}}</td>
+            <td>{{user.registration}}</td>
             <td><span class="actions"><i class="fa fa-trash"></i></span></td>
           </tr>
         </tbody>
@@ -33,14 +33,12 @@
 </template>
 
 <script>
-import bikersData from '../../api/bikers.json'
-
 export default {
-  data() {
-    return {
-      bikers: bikersData.bikers,
-    } 
-  }
+ computed: {
+    users() {
+      return this.$store.getters.users
+    }
+ }
 }
 </script>
 
