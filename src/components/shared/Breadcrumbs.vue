@@ -1,13 +1,12 @@
 <template>
-  <div class="row">
+  <div class="row breadcrumb">
     <div class="column">
-      <i class="fa fa-home fa-2x"></i>
-      <i class="fa fa-chevron-right fa-2x"></i>
-      Page 1
-      <i class="fa fa-chevron-right fa-2x"></i>
-      Breadcrumb
-      <i class="fa fa-chevron-right fa-2x"></i>
-      Current page
+      <ul>
+        <li><i class="fa fa-home"></i></li>
+        <li><i class="breadcrumb__separator">&#12297;</i> Page 1</li>
+        <li><i class="breadcrumb__separator">&#12297;</i> Breadcrumb</li>
+        <li class="breadcrumb--active"><i class="breadcrumb__separator">&#12297;</i>Bikers</li>
+      </ul>
     </div>
   </div>
 </template>
