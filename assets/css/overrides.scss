@@ -14,4 +14,9 @@ button.button {
   height: 1rem;
   padding: 1rem .25rem;
   line-height: 0;
+
+  &:focus {
+    border-color: #329A0E;
+  }
 }
+

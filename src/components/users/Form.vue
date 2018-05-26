@@ -4,11 +4,14 @@
       <form>
         <fieldset>
           <label for="nameField">Full name</label>
-          <input placeholder="CJ Patoilo" id="nameField" type="text">
+          <input id="nameField" type="text">
+          <div class="input__hint">Please enter both your first and last name</div>
           <label for="nameField">Email</label>
-          <input placeholder="CJ Patoilo" id="nameField" type="email">
+          <input id="nameField" type="email">
+          <div class="input__hint">Please enter your email so we can get in touch with you</div>
           <label for="nameField">City</label>
-          <input placeholder="CJ Patoilo" id="nameField" type="text">        
+          <input id="nameField" type="text">        
+          <div class="input__hint">Please enter the city where you live</div>
         </fieldset>
       </form>
     </div>
