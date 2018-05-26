@@ -16,16 +16,18 @@ const store = new Vuex.Store({
     users: state => state.users,
   },
   mutations: {
-    users: (state, data) => {
-      state.users = data
-    },
     addUser: (state, user) => {
       state.users.push(user)
-    }
+    },
+    removeUser: (state, id) => {
+      state.users = state.users.filter(function(user) {
+        return user.id != id;
+      })
+    },
   },
   actions : {
-    fetchUsers({state, commit}) {
-      commit('users', state.users )
+    deleteUser({commit}, id) {
+      commit('removeUser', id)
     },
     createUser({commit}, user) {
       commit('addUser', user)

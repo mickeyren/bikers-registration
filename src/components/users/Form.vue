@@ -87,6 +87,7 @@ export default {
       if(this._.intersection(['Mon', 'Tue', 'Wed', 'Thu', 'Fri'], this.daysOfTheWeek).length == Math.max(5, this.daysOfTheWeek.length)) {
         this.user.daysOfTheWeek = 'Weekdays'
       } 
+      this.user.id = Date.now()
       this.user.registration = Date.now()
       this.$store.dispatch('createUser', Object.assign({}, this.user))
       this.cancel()

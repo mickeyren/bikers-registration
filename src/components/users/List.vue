@@ -23,7 +23,7 @@
             <td>{{user.rideInGroup}}</td>
             <td>{{user.daysOfTheWeek}}</td>
             <td>{{formatDate(user.registration)}}</td>
-            <td><span class="actions"><i class="fa fa-trash"></i></span></td>
+            <td><span class="actions"><i class="fa fa-trash" @click="removeUser(user.id)"></i></span></td>
           </tr>
         </tbody>
       </table>
@@ -37,6 +37,9 @@ export default {
   methods: {
     formatDate(timestamp) {
       return new Date(timestamp).toGMTString()
+    },
+    removeUser(id) {
+      this.$store.dispatch('deleteUser', id)
     }
   },
   computed: {
