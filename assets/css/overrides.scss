@@ -9,14 +9,46 @@
 }
 
 input[type="text"],
-input[type="email"],
-button.button {
+input[type="email"] {
   height: 1rem;
-  padding: 1rem .25rem;
+  padding: 0.5rem 0.75rem;
   line-height: 0;
 
   &:focus {
     border-color: #329A0E;
+  }
+}
+.label-inline {
+  margin-left: -0.25rem;
+  margin-right: 1.25rem;
+}
+label > input {
+  vertical-align: middle;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+}
+
+.buttons {
+  margin-top: 3rem;
+}
+
+.button {
+  background-color: #dddddd;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 0;
+  padding: 1rem 1.5rem;
+  height: 0;
+  text-transform: none;
+
+  &:hover {
+    background: #329A0E;
   }
 }
 

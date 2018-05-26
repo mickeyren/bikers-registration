@@ -3,8 +3,7 @@
   width: 100%;
 }
 .accordion__title {
-  font-size: 0.7rem;
-  text-transform: uppercase;
+  font-weight: bold;
   letter-spacing: 2px;
   padding: 1rem 1.5rem;
   background: #f0f0f0;
@@ -41,6 +40,15 @@
   max-height: 500px;
 }
 
+.media__left {
+  float: left;
+  margin-right: 1rem;
+}
+
+label {
+  font-size: 1rem;
+}
+
 .input__hint { 
   color:#999; 
   opacity:0; 
@@ -50,6 +58,10 @@
 
 input:focus+.input__hint { 
   opacity: 1; 
+}
+
+h1.title {
+  display: block;
 }
 
 thead tr {

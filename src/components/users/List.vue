@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="column">
-    <h1>Bikers</h1><br/>
+    <h1 class="title">Bikers</h1>
     <table>
       <thead>
         <tr>
