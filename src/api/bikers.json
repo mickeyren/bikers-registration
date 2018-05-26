@@ -17,6 +17,24 @@
       "rideInGroup": "Always",
       "daysOfTheWeek": "Everyday",
       "registration": 1527338385025
-    }    
+    },
+    {
+      "id": 3,
+      "name": "David Vincent",
+      "email": "davidang@gmail.com",
+      "city": "Quezon City",
+      "rideInGroup": "Sometimes",
+      "daysOfTheWeek": "Mon, Wed, Fri",
+      "registration": 1527338385025
+    },
+    {
+      "id": 4,
+      "name": "Arsen",
+      "email": "4eaamotrtq-6+lj9p@inbound.workablemail.com",
+      "city": "Kuala Lumpur",
+      "rideInGroup": "Always",
+      "daysOfTheWeek": "Everyday",
+      "registration": 1527338385025
+    }            
   ]
 }

@@ -52,11 +52,39 @@ input:focus+.input__hint {
   opacity: 1; 
 }
 
-tr .actions {
-  opacity: 0;
-  transition: opacity .15s ease-in-out;
+thead tr {
+  background-color: #34A00F;
+  color: #ffffff;
 }
 
-tr:hover .actions { 
-  opacity: 1;
+tr {
+  background: #ffffff;
+  &:nth-child(even) {
+    background: #f4f4f4;
+  } 
+  th {
+    padding: 1.5rem 0.75rem 0.75rem;
+    &:first-child {
+      padding-left: 0.75rem;
+    }
+  }
+  td {
+    border-bottom: 0;    
+    padding: 1rem;
+    &:first-child,
+    &:last-child {
+      padding: 1rem;
+    }
+  }
+  .actions {
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+  }
+}
+
+tbody tr:hover {
+  background-color: #c5dfbc;
+  .actions { 
+    opacity: 1;
+  }
 }

@@ -4,13 +4,15 @@
     <h1>Bikers</h1><br/>
     <table>
       <thead>
-        <th>Full name</th> 
-        <th>E-mail</th> 
-        <th>City</th> 
-        <th>Ride in group</th> 
-        <th>Days of the week</th> 
-        <th>Registration day</th>
-        <th></th>
+        <tr>
+          <th>Full name</th> 
+          <th>E-mail</th> 
+          <th>City</th> 
+          <th>Ride in group</th> 
+          <th>Days of the week</th> 
+          <th>Registration day</th>
+          <th></th>
+        </tr>
       </thead>
       <tbody>
         <tr v-for="biker in bikers" :key="biker.id">
