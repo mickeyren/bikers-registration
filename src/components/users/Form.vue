@@ -20,50 +20,50 @@
       <div class="column column-offset-10">
         <label>Ride in group?</label>
         <label class="label-inline">
-          <input type="radio" name="ride_in_group">        
+          <input type="radio" value="Always" v-model="user.rideInGroup">        
           Always
         </label>  
         <label class="label-inline">
-          <input type="radio" name="ride_in_group">
+          <input type="radio" value="Sometimes" v-model="user.rideInGroup">
           Sometimes
         </label>  
         <label class="label-inline">
-          <input type="radio" name="ride_in_group">
+          <input type="radio" value="Never" v-model="user.rideInGroup">
           Never
         </label>  
 
         <label>Days of the week</label>
         <label class="label-inline">
-          <input type="checkbox">
+          <input type="checkbox" value="Sun" v-model="daysOfTheWeek">
           Sun
         </label>  
         <label class="label-inline">
-          <input type="checkbox">
+          <input type="checkbox" value="Mon" v-model="daysOfTheWeek">
           Mon
         </label>  
         <label class="label-inline">
-          <input type="checkbox">
+          <input type="checkbox" value="Tue" v-model="daysOfTheWeek">
           Tue
         </label>  
         <label class="label-inline">
-          <input type="checkbox">
+          <input type="checkbox" value="Wed" v-model="daysOfTheWeek">
           Wed
         </label>  
         <label class="label-inline">
-          <input type="checkbox">
+          <input type="checkbox" value="Thu" v-model="daysOfTheWeek">
           Thu
         </label>  
         <label class="label-inline">
-          <input type="checkbox">
+          <input type="checkbox" value="Fri" v-model="daysOfTheWeek">
           Fri
         </label>  
         <label class="label-inline">
-          <input type="checkbox">
+          <input type="checkbox" value="Sat" v-model="daysOfTheWeek">
           Sat
         </label>  
         <div class="buttons pull-right">
-          <button class="button">Cancel</button>
-          <button class="button" @click="addUser">Save</button>   
+          <button class="button" @click="cancel">Cancel</button>
+          <button class="button" @click="createUser">Save</button>   
         </div>
       </div>
     </div>  
@@ -74,12 +74,26 @@
 export default {
   data() {
     return {
+      daysOfTheWeek: [],
       user: {}
     }
   },
   methods: {
-    addUser() {
+    createUser() {
+      this.user.daysOfTheWeek = this.daysOfTheWeek.join(', ')
+      if(this._.intersection(['Sat', 'Sun'], this.daysOfTheWeek).length == Math.max(2, this.daysOfTheWeek.length)) {
+        this.user.daysOfTheWeek = 'Weekends'
+      } 
+      if(this._.intersection(['Mon', 'Tue', 'Wed', 'Thu', 'Fri'], this.daysOfTheWeek).length == Math.max(5, this.daysOfTheWeek.length)) {
+        this.user.daysOfTheWeek = 'Weekdays'
+      } 
+      this.user.registration = Date.now()
       this.$store.dispatch('createUser', Object.assign({}, this.user))
+      this.cancel()
+    },
+    cancel() {
+      this.user = {}
+      this.daysOfTheWeek = []
     }
   }
 }
