@@ -101,6 +101,9 @@ tr {
   .actions {
     opacity: 0;
     transition: opacity .15s ease-in-out;
+    i {
+      cursor: pointer;
+    }
   }
 }
 
