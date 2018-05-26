@@ -22,7 +22,7 @@
             <td>{{user.city}}</td>
             <td>{{user.rideInGroup}}</td>
             <td>{{user.daysOfTheWeek}}</td>
-            <td>{{user.registration}}</td>
+            <td>{{formatDate(user.registration)}}</td>
             <td><span class="actions"><i class="fa fa-trash"></i></span></td>
           </tr>
         </tbody>
@@ -34,7 +34,12 @@
 
 <script>
 export default {
- computed: {
+  methods: {
+    formatDate(timestamp) {
+      return new Date(timestamp).toGMTString()
+    }
+  },
+  computed: {
     users() {
       return this.$store.getters.users
     }
