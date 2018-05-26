@@ -1,0 +1,18 @@
+.level {
+  padding: 2rem 0;
+
+  i {
+    float: left;
+    margin-right: 1rem;
+  }
+  .level__heading,
+  .level__title {
+    display: block;
+    line-height: 0.25;
+    margin-top: 0.75rem;
+    white-space: nowrap;
+  }
+  .level__title {
+    font-weight: bold;
+  }
+}

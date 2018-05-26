@@ -8,5 +8,9 @@
 $fa-font-path: "~font-awesome/fonts/";
 @import "~font-awesome/scss/font-awesome";
 
+@import './components/accordion';
+@import './components/breadcrumb';
+@import './components/level';
+
 @import './overrides';
 @import './custom';
